@@ -1,0 +1,11 @@
+bool solve(LLNode* head) {
+    auto currEl = 0;
+    while (head->next != NULL) {
+        currEl = head->val;
+        if (currEl >= head->next->val) {
+            return false;
+        }
+        head = head->next;
+    }
+    return true;
+}
